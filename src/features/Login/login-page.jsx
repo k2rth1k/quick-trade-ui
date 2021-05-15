@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './LoginPage.css';
 import {useDispatch, useSelector} from "react-redux";
 import {loginAction} from "../../redux/auth/authActions";
-
+import {Routes} from "../../routes";
 
 export function Login(){
     const status = useSelector((state) => state)
@@ -42,6 +42,9 @@ export function Login(){
 
             <div className={'LoginButton'}>
                 <button onClick={submit}> Login</button>
+            </div>
+            <div className={'createUserFormLink'}>
+                <a href={Routes.createUserForm}>Create an account</a>
             </div>
         </div>
     )
