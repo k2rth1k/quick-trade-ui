@@ -3,19 +3,29 @@
     --margin-width: 600px;
 }
 
+.createUserPage{
+    background-color: #101015;
+    padding: 40px 0 0 0;
+    height: 100vh;
+}
 
-
-
-.ui.form .field.emailInput label{
+.ui.form .field  label{
     color: white;
 }
 
-button.ui.button{
-    color:red;
+.createUserForm{
+    width: 900px;
+    margin: 0 0 0 400px;
+    padding: 36px;
+    border-radius: 8px;
+    background-color: #282c34;
+    color: white;
+
+    .title{
+        text-align: center;
+    }
 }
 
-:global(#App) {
-    .labelTest {
-        color: white;
-    }
+.ui.input > input::placeholder{
+    color: #111111;
 }

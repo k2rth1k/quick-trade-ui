@@ -45,18 +45,24 @@ export default function CreateUserForm(){
         dispatch(createUser({email,password,lastName,firstName,phone}))
     }
     return(
-            <Form>
-                <Form.Input  className={styles.labelTest} required label={'Email'} placeholder={'Email'} onChange={changeEmail}/>
-                <Form.Input required  label={'First Name'} placeholder={'First Name'} onChange={changeFirstName}/>
-                <Form.Input required label={'Last Name'} placeholder={'Last Name'} onChange={changeLastName} />
-                <Form.Input required label={'Phone'} placeholder={'Phone'} onChange={changePhone} />
-                <Form.Input required label={'Password'} placeholder={'Password'} onChange={changePassword}/>
-                <Form.Input required error={retypePassword!==password &&
+        <div className={'createUserPage'}>
+            <div className={'createUserForm'}>
+                <h2 className={'title'}> Create Account</h2>
+                <Form  id={'form'}>
+                    <Form.Input className={'email input'} required label={'Email'} placeholder={'Email'} onChange={changeEmail}/>
+                    <Form.Input required  label={'First Name'} placeholder={'First Name'} onChange={changeFirstName}/>
+                    <Form.Input required label={'Last Name'} placeholder={'Last Name'} onChange={changeLastName} />
+                    <Form.Input required label={'Phone'} placeholder={'Phone'} onChange={changePhone} />
+                    <Form.Input required label={'Password'} placeholder={'Password'} onChange={changePassword}/>
+                    <Form.Input required error={retypePassword!==password &&
                     "passwords must be same"
-                } label={'Retype Password'} placeholder={'Retype Password'} onChange={changeRetypePassword}/>
-                <Form.Button onClick={submit} color="green">
-                    Submit
-                </Form.Button>
-            </Form>
+                    } label={'Retype Password'} placeholder={'Retype Password'} onChange={changeRetypePassword}/>
+                    <Form.Button onClick={submit} color="green">
+                        Submit
+                    </Form.Button>
+                </Form>
+            </div>
+        </div>
+
     )
 }
