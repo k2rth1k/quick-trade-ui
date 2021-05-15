@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './LoginPage.css';
 import {useDispatch, useSelector} from "react-redux";
-import {loginAction} from "../../redux/auth/authAuctions";
+import {loginAction} from "../../redux/auth/authActions";
 
 
 export function Login(){

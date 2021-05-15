@@ -1,13 +1,14 @@
 import {createStore, applyMiddleware, combineReducers} from "redux";
 import createSagaMiddleware from 'redux-saga'
 import {authReducer} from "./auth/authReducers";
-import {watchLogin} from "./auth/authSagas"
 import rootSaga from "./module";
+import {usersReducers} from "./users/userReducers";
 
 
     const sagaMiddleware = createSagaMiddleware()
 const reducer = combineReducers({
-        auth:authReducer
+        auth:authReducer,
+        users:usersReducers
         }
         )
     const store = createStore(

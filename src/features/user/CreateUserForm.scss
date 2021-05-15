@@ -1,0 +1,21 @@
+:root {
+    --radius: 2px;
+    --margin-width: 600px;
+}
+
+
+
+
+.ui.form .field.emailInput label{
+    color: white;
+}
+
+button.ui.button{
+    color:red;
+}
+
+:global(#App) {
+    .labelTest {
+        color: white;
+    }
+}
