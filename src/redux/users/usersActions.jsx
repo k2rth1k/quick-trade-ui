@@ -6,3 +6,16 @@ export function createUser(payload){
         payload
     }
 }
+
+export function getUser(){
+    return{
+        type: USERS.GET_STATE
+    }
+}
+
+export function handleCreateUserResponse(payload){
+    return {
+        type: USERS.HANDLE_CREATE_USER_RESPONSE,
+        payload
+    }
+}

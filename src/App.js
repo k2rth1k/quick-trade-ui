@@ -6,13 +6,17 @@ import {
 } from "react-router-dom";
 import CreateUserForm from "./features/user/CreateUserForm";
 import {Routes} from "./routes"
+import MainPage from './features/MainPage/mainPage';
 import './App.css'
 function App() {
   return (
     <div id={'App'}>
 
       <Router>
-              <Route exact path={'/'}>
+          <Route exact path={'/'}>
+              <MainPage/>
+          </Route>
+              <Route exact path={'/login'}>
                   <Login/>
               </Route>
               <Route exact path={Routes.createUserForm}>
